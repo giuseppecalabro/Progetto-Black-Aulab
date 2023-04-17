@@ -1,0 +1,242 @@
+/* SET-UP */
+:root{
+    --cb: #2B9DF4;
+    --cn: black;
+}
+
+body{
+    background-color: var(--cn);
+}
+
+*{
+    font-family: 'Jura', sans-serif;
+}
+
+h1,h2,h3, .h1, .h2, .h3{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.txt-white{
+    color: white;
+}
+
+.txt-white-o{
+    color: rgba(255, 255, 255, 0.514);
+}
+
+.txt-blue{
+    color: var(--cb);
+}
+
+/* webkit custom scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--cb); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #056dbd ; 
+    -webkit-box-shadow: inset 0 0 12px rgba(0,0,0,0.5); 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px var(--cb); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+/* navbar */
+.bg-custom{
+    background-color: var(--cn);
+    border-bottom: 1px solid white;
+}
+
+.logo-custom{
+    width: 30px;
+    color: white;
+}
+
+.link-custom{
+    color: rgba(255, 255, 255, 0.514);
+    transition: 0.5s;
+}
+
+.link-custom:hover{
+    color: white;
+}
+
+/* header */
+
+.bg-header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url(./mediaBLACK/moon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.freccia-custom{
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--cb);
+    position: absolute;
+    bottom: 60px;
+    transition: 0.5s;
+    animation-name: arrow-up-down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.freccia-custom:hover{
+    animation-play-state: paused;
+}
+
+@keyframes arrow-up-down {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(10px);}
+    100%{transform: translateY(20px);}
+}
+
+@media  screen and (max-width:576px) {
+    .freccia-custom{
+        position: absolute;
+        left: calc(50% - 16px);
+    }
+}
+
+.fs-p{
+    font-size:28px;
+}
+
+/* cards */
+
+.bordo-bottom{
+    opacity: 50%;
+    border-bottom: 2px solid var(--cb);
+}
+
+/* sezione luna */
+.mt-custom{
+    margin-top: 10%;
+}
+
+@media screen and (max-width:576px){
+    .pt-mobile-custom{
+        padding-top: 10%;
+    }
+}
+
+/* 5 paragrafi NO CSS*/
+
+
+/* sezione razzo*/
+/* ANIMAZIONE RAZZO */
+.height-razzo:hover{
+    animation-name: razzo;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    position: relative;
+    z-index: 9999;
+}
+
+@keyframes razzo{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-1500px);}
+}
+
+@media screen and (max-width:576px) {
+    .height-razzo:hover{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* sezione con bottoni ad angolo */
+.btn-angle{
+    padding: 15px 50px;
+    background-color: transparent;
+    position: relative;
+    border: none;
+    transition: 0.5s;
+}
+.btn-angle:hover{
+    transform: scale(1.2);
+}
+
+.angle-1{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border-top: 2px solid var(--cb);
+    border-left: 2px solid var(--cb);
+    top: 0px;
+    left: 0px;
+}
+.angle-2{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border-top: 2px solid var(--cb);
+    border-right: 2px solid var(--cb);
+    top: 0px;
+    right: 0px;
+}
+.angle-3{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border-bottom: 2px solid var(--cb);
+    border-left: 2px solid var(--cb);
+    bottom: 0px;
+    left: 0px;
+}
+.angle-4{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border-bottom: 2px solid var(--cb);
+    border-right: 2px solid var(--cb);
+    bottom: 0px;
+    right: 0px;
+}
+
+/* footer */
+.bg-footer{
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url(./mediaBLACK/sunrise-1765027_1920.jpg);
+    background-position: center;
+}
+
+.fade-custom{
+    color: white;
+    transition: 0.5s;
+}
+.fade-custom:hover{
+    color: rgba(255, 255, 255, 0.39);
+}
+
+.riga-finale{
+    border-radius: 20%;
+    height: 5px;
+    width: 40%;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(43,157,244,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+@media  screen and (max-width:576px) {
+    .riga-finale{
+        height: 3px;
+        width: 90%;
+    }
+}
+
